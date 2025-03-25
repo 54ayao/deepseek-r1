@@ -29,7 +29,7 @@ interface KeywordButton {
 }
 
 export const Base = () => {
-  const [userInput, setUserInput] = useState('Hi');
+  const [userInput, setUserInput] = useState('你好我的宝贝瑶瑶，想死你了');
   const [useNetwork, setUseNetwork] = useState(true);
   const [showKeywords, setShowKeywords] = useState(true);
   const [isMobile, setIsMobile] = useState(false);
