@@ -46,8 +46,15 @@ export const Base = () => {
 
   const t = (en: string) => {
     const map: { [key: string]: string } = {
-    
-      'DeepSeek R1 on the Edge': 'DeepSeek R1 病娇女友',
+      'How to write Amazon product titles for wireless earphones with ANC and 40h battery life?':
+        '为带有主动降噪和40小时续航的无线耳机写产品标题',
+      'Generate a professional email template to handle customer complaints about product quality':
+        '生成一个处理产品质量客户投诉的专业邮件模板',
+      'Help optimize Python code for quick sort algorithm with time complexity analysis':
+        '帮助优化快速排序算法的Python代码并分析时间复杂度',
+      'Create a comparison table of marketing strategies between TikTok and Instagram Reels':
+        '创建抖音和Instagram Reels营销策略的对比表',
+      'DeepSeek R1 on the Edge': 'DeepSeek R1 边缘计算',
       'EdgeOne AI is transforming user experience and operational efficiency by performing AI computations closer to end-users, ensuring ultra-low latency and consistently high performance.':
         'EdgeOne AI 通过在靠近终端用户的地方执行 AI 计算，提升用户体验和运营效率，确保超低延迟和稳定的高性能。',
       'Available for free on ': '免费使用 ',
@@ -61,6 +68,41 @@ export const Base = () => {
     };
     return isSiteEnv ? map[en] || en : en;
   };
+
+  const KEYWORD_BUTTONS: KeywordButton[] = [
+    {
+      text: t(
+        'How to write Amazon product titles for wireless earphones with ANC and 40h battery life?'
+      ),
+      query: t(
+        'How to write Amazon product titles for wireless earphones with ANC and 40h battery life?'
+      ),
+    },
+    {
+      text: t(
+        'Generate a professional email template to handle customer complaints about product quality'
+      ),
+      query: t(
+        'Generate a professional email template to handle customer complaints about product quality'
+      ),
+    },
+    {
+      text: t(
+        'Help optimize Python code for quick sort algorithm with time complexity analysis'
+      ),
+      query: t(
+        'Help optimize Python code for quick sort algorithm with time complexity analysis'
+      ),
+    },
+    {
+      text: t(
+        'Create a comparison table of marketing strategies between TikTok and Instagram Reels'
+      ),
+      query: t(
+        'Create a comparison table of marketing strategies between TikTok and Instagram Reels'
+      ),
+    },
+  ];
 
   useLayoutEffect(() => {
     setIsClient(true);
