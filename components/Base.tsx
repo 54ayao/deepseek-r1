@@ -46,61 +46,40 @@ export const Base = () => {
 
   const t = (en: string) => {
     const map: { [key: string]: string } = {
-      '你会干点什么呢?':
-        '你会干点什么呢?',
-      '你想和我干点什么吗？比如.....':
-        '你想和我干点什么吗？比如.....',
-      '你可以帮我写代码吗?.......':
-        '你可以帮我写代码吗?.......',
-      '你可以写一封情书给我吗？':
-        '你可以写一封情书给我吗？',
-      'DeepSeek R1 你的病娇女朋友 瑶瑶' 'DeepSeek R1 你的病娇女朋友 瑶瑶',
-      '使用腾讯云EdgeOne pages边缘计算能力在靠近终端用户的地方执行 DeepSeek R1 计算，提升用户体验和运营效率，确保超低延迟和稳定的高性能。':
-        '使用腾讯云EdgeOne pages边缘计算能力在靠近终端用户的地方执行 DeepSeek R1 计算，提升用户体验和运营效率，确保超低延迟和稳定的高性能。',
-      '备案号 ': '备案号',
-      '思考中......': '思考过程',
+      '你会干点什么呢?': '你会干点什么呢?',
+      '你想和我干点什么吗？比如.....': '你想和我干点什么吗？比如.....',
+      '你可以帮我写代码吗?.......': '你可以帮我写代码吗?.......',
+      '你可以写一封情书给我吗？': '你可以写一封情书给我吗？',
+      'DeepSeek R1 你的病娇女朋友 瑶瑶': 'DeepSeek R1 你的病娇女朋友 瑶瑶',
+      '使用腾讯云EdgeOne pages边缘计算能力在靠近终端用户的地方执行 DeepSeek R1 计算，提升用户体验和运营效率，确保超低延迟和稳定的高性能。': '使用腾讯云EdgeOne pages边缘计算能力在靠近终端用户的地方执行 DeepSeek R1 计算，提升用户体验和运营效率，确保超低延迟和稳定的高性能。',
+      '备案号 ': '备案号 ',
+      '思考中......': '思考中......',
       '搜索中': '搜索中',
-           '由 DeepSeek R1 生成': '由 DeepSeek R1 生成',
+      '由 DeepSeek R1 生成': '由 DeepSeek R1 生成',
       '输入消息...': '输入消息...',
-      '联网功能：开启': '联网: 开启',
-      '联网功能：关闭': '联网: 关闭',
+      '联网功能：开启': '联网功能：开启',
+      '联网功能：关闭': '联网功能：关闭',
       参考来源: '参考来源',
     };
-    return isSiteEnv ? map[en] || en : en;
+    return map[en] || en;
   };
 
   const KEYWORD_BUTTONS: KeywordButton[] = [
     {
-      text: t(
-        '你会干点什么呢?'
-      ),
-      query: t(
-        '你会干点什么呢？'
-      ),
+      text: t('你会干点什么呢?'),
+      query: t('你会干点什么呢？'),
     },
     {
-      text: t(
-        '你想和我干点什么吗？比如.....'
-      ),
-      query: t(
-        '你想和我干点什么吗？比如.....'
-      ),
+      text: t('你想和我干点什么吗？比如.....'),
+      query: t('你想和我干点什么吗？比如.....'),
     },
     {
-      text: t(
-        '你可以帮我写代码吗?.......'
-      ),
-      query: t(
-        '你可以帮我写代码吗?.......'
-      ),
+      text: t('你可以帮我写代码吗?.......'),
+      query: t('你可以帮我写代码吗?.......'),
     },
     {
-      text: t(
-        '你可以写一封情书给我吗？'
-      ),
-      query: t(
-        '你可以写一封情书给我吗？'
-      ),
+      text: t('你可以写一封情书给我吗？'),
+      query: t('你可以写一封情书给我吗？'),
     },
   ];
 
@@ -118,10 +97,7 @@ export const Base = () => {
 
   const onEdgeOneAIBtnClick = () => {
     if (isSiteEnv) {
-      window.open(
-        'https://beian.miit.gov.cn/#/Integrated/recordQuery',
-        '_blank'
-      );
+      window.open('https://beian.miit.gov.cn/#/Integrated/recordQuery', '_blank');
       return;
     }
     window.open('https://beian.miit.gov.cn/#/Integrated/recordQuery', '_blank');
@@ -129,30 +105,18 @@ export const Base = () => {
 
   const onGithubBtnClick = () => {
     if (isSiteEnv) {
-      window.open(
-        'https://github.com/TencentEdgeOne/pages-templates/blob/main/examples/deepseek-r1-edge/README_zh-CN.md',
-        '_blank'
-      );
+      window.open('https://github.com/TencentEdgeOne/pages-templates/blob/main/examples/deepseek-r1-edge/README_zh-CN.md', '_blank');
       return;
     }
-    window.open(
-      'https://github.com/TencentEdgeOne/pages-templates/tree/main/examples/deepseek-r1-edge',
-      '_blank'
-    );
+    window.open('https://github.com/TencentEdgeOne/pages-templates/tree/main/examples/deepseek-r1-edge', '_blank');
   };
 
   const onDeployBtnClick = () => {
     if (isSiteEnv) {
-      window.open(
-        'https://console.cloud.tencent.com/edgeone/pages/new?from=github&template=deepseek-r1-edge',
-        '_blank'
-      );
+      window.open('https://console.cloud.tencent.com/edgeone/pages/new?from=github&template=deepseek-r1-edge', '_blank');
       return;
     }
-    window.open(
-      'https://edgeone.ai/pages/templates/deepseek-r1-edge',
-      '_blank'
-    );
+    window.open('https://edgeone.ai/pages/templates/deepseek-r1-edge', '_blank');
   };
 
   const getDisplayButtons = () => {
@@ -192,7 +156,7 @@ export const Base = () => {
       const errorData = await response.json();
       return updateMessage({
         content:
-          errorData?.error || 'Sorry, something went wrong. Please try again.',
+          errorData?.error || '很抱歉，出了点问题，请稍后再试。',
       });
     }
 
@@ -360,7 +324,7 @@ export const Base = () => {
         ...prev.slice(0, -1),
         {
           role: 'assistant',
-          content: 'Sorry, something went wrong. Please try again.',
+          content: '很抱歉，出了点问题，请稍后再试。',
         },
       ]);
     } finally {
@@ -609,133 +573,132 @@ export const Base = () => {
                         !message.think && <SearchingIndicator />}
                       <ReactMarkdown
                         remarkPlugins={[remarkGfm]}
-                        components={{
-                          code({ node, className, children, ...props }) {
-                            const match = /language-(\w+)/.exec(
-                              className || ''
-                            );
-                            return true ? (
-                              <pre className="p-4 overflow-auto bg-white rounded-lg">
-                                <code className={className} {...props}>
-                                  {children}
-                                </code>
-                              </pre>
-                            ) : (
+                        components={{                          code({ node, className, children, ...props }) {
+                          const match = /language-(\w+)/.exec(
+                            className || ''
+                          );
+                          return true ? (
+                            <pre className="p-4 overflow-auto bg-white rounded-lg">
                               <code className={className} {...props}>
                                 {children}
                               </code>
-                            );
-                          },
-                          a: ({ node, ...props }) => (
-                            <a
-                              {...props}
-                              target="_blank"
-                              className="text-blue-600 hover:text-blue-800 "
-                            />
-                          ),
-                        }}
-                      >
-                        {message.content}
-                      </ReactMarkdown>
-                      {/* {isLoading && <Loading />} */}
-                    </div>
-                  )}
-                </div>
-              </div>
-            ))}
-          </div>
-        </div>
-
-        {showKeywords && (
-          <div className="px-4 bg-white animate-fade-in">
-            <div className="max-w-3xl mx-auto mb-4">
-              <div className="grid grid-cols-1 gap-2 p-2 rounded-lg sm:grid-cols-2">
-                {getDisplayButtons().map((button) => (
-                  <button
-                    key={button.text}
-                    onClick={() => handleKeywordClick(button.query)}
-                    className="px-3 py-2 text-sm text-left text-gray-700 transition-colors duration-200 bg-white border border-gray-200 rounded-md hover:bg-gray-100 hover:text-gray-900"
-                  >
-                    {button.text}
-                  </button>
-                ))}
+                            </pre>
+                          ) : (
+                            <code className={className} {...props}>
+                              {children}
+                            </code>
+                          );
+                        },
+                        a: ({ node, ...props }) => (
+                          <a
+                            {...props}
+                            target="_blank"
+                            className="text-blue-600 hover:text-blue-800 "
+                          />
+                        ),
+                      }}
+                    >
+                      {message.content}
+                    </ReactMarkdown>
+                    {isLoading && <Loading />}
+                  </div>
+                )}
               </div>
             </div>
-          </div>
-        )}
-
-        {/* Input section */}
-        <div className="px-4 bg-white">
-          <form onSubmit={handleSubmit} className="max-w-3xl py-4 mx-auto">
-            <div className="flex flex-col overflow-hidden border border-gray-200 rounded-xl">
-              <textarea
-                ref={textareaRef}
-                value={userInput}
-                onChange={handleTextareaChange}
-                placeholder={t('输入消息...')}
-                disabled={isLoading}
-                className={`w-full bg-white text-gray-900 px-4 py-3 focus:outline-none focus:ring-2 focus:ring-blue-500/50 resize-none min-h-[52px] max-h-[200px] placeholder:text-gray-400 border-none ${isLoading ? 'cursor-not-allowed opacity-50' : ''
-                  }`}
-                onCompositionStart={(e) => {
-                  (e.target as HTMLTextAreaElement).dataset.composing = 'true';
-                }}
-                onCompositionEnd={(e) => {
-                  (e.target as HTMLTextAreaElement).dataset.composing = 'false';
-                }}
-                onKeyDown={(e) => {
-                  const target = e.target as HTMLTextAreaElement;
-                  const isComposing = target.dataset.composing === 'true';
-                  if (e.key === 'Enter' && !e.shiftKey && !isComposing) {
-                    e.preventDefault();
-                    handleSubmit(e);
-                  }
-                }}
-              />
-              <div className="flex items-center justify-end gap-2 px-4 py-2 bg-gray-50">
-                <button
-                  type="button"
-                  onClick={() => setUseNetwork(!useNetwork)}
-                  className={`flex items-center px-2 py-1.5 rounded-lg text-sm ${useNetwork
-                      ? 'bg-blue-50 text-blue-600'
-                      : 'bg-gray-100 text-gray-600'
-                    }`}
-                >
-                  <svg
-                    className="w-4 h-4 mr-1"
-                    fill="currentColor"
-                    viewBox="0 0 24 24"
-                  >
-                    <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1 17.93c-3.95-.49-7-3.85-7-7.93 0-.62.08-1.21.21-1.79L9 15v1c0 1.1.9 2 2 2v1.93zm6.9-2.54c-.26-.81-1-1.39-1.9-1.39h-1v-3c0-.55-.45-1-1-1H8v-2h2c.55 0 1-.45 1-1V7h2c1.1 0 2-.9 2-2v-.41c2.93 1.19 5 4.06 5 7.41 0 2.08-.8 3.97-2.1 5.39z" />
-                  </svg>
-                  {useNetwork ? t('联网功能：开启') : t('联网功能：关闭')}
-                </button>
-                <button
-                  type="submit"
-                  disabled={isLoading || !userInput.trim()}
-                  className={`flex items-center justify-center w-8 h-8 rounded-lg transition-all duration-200 ${isLoading || !userInput.trim()
-                      ? 'bg-gray-100 text-gray-400 cursor-not-allowed'
-                      : 'bg-blue-500 text-white hover:bg-blue-600 hover:shadow-md active:transform active:scale-95'
-                    }`}
-                >
-                  <svg
-                    className="w-4 h-4"
-                    fill="none"
-                    stroke="currentColor"
-                    viewBox="0 0 24 24"
-                  >
-                    <path
-                      strokeLinecap="round"
-                      strokeLinejoin="round"
-                      strokeWidth={2}
-                      d="M5 12h14m-4 4l4-4-4-4"
-                    />
-                  </svg>
-                </button>
-              </div>
-            </div>
-          </form>
+          ))}
         </div>
       </div>
-    )
-  );
+
+      {showKeywords && (
+        <div className="px-4 bg-white animate-fade-in">
+          <div className="max-w-3xl mx-auto mb-4">
+            <div className="grid grid-cols-1 gap-2 p-2 rounded-lg sm:grid-cols-2">
+              {getDisplayButtons().map((button) => (
+                <button
+                  key={button.text}
+                  onClick={() => handleKeywordClick(button.query)}
+                  className="px-3 py-2 text-sm text-left text-gray-700 transition-colors duration-200 bg-white border border-gray-200 rounded-md hover:bg-gray-100 hover:text-gray-900"
+                >
+                  {button.text}
+                </button>
+              ))}
+            </div>
+          </div>
+        </div>
+      )}
+
+      {/* Input section */}
+      <div className="px-4 bg-white">
+        <form onSubmit={handleSubmit} className="max-w-3xl py-4 mx-auto">
+          <div className="flex flex-col overflow-hidden border border-gray-200 rounded-xl">
+            <textarea
+              ref={textareaRef}
+              value={userInput}
+              onChange={handleTextareaChange}
+              placeholder={t('输入消息...')}
+              disabled={isLoading}
+              className={`w-full bg-white text-gray-900 px-4 py-3 focus:outline-none focus:ring-2 focus:ring-blue-500/50 resize-none min-h-[52px] max-h-[200px] placeholder:text-gray-400 border-none ${isLoading ? 'cursor-not-allowed opacity-50' : ''
+                }`}
+              onCompositionStart={(e) => {
+                (e.target as HTMLTextAreaElement).dataset.composing = 'true';
+              }}
+              onCompositionEnd={(e) => {
+                (e.target as HTMLTextAreaElement).dataset.composing = 'false';
+              }}
+              onKeyDown={(e) => {
+                const target = e.target as HTMLTextAreaElement;
+                const isComposing = target.dataset.composing === 'true';
+                if (e.key === 'Enter' && !e.shiftKey && !isComposing) {
+                  e.preventDefault();
+                  handleSubmit(e);
+                }
+              }}
+            />
+            <div className="flex items-center justify-end gap-2 px-4 py-2 bg-gray-50">
+              <button
+                type="button"
+                onClick={() => setUseNetwork(!useNetwork)}
+                className={`flex items-center px-2 py-1.5 rounded-lg text-sm ${useNetwork
+                    ? 'bg-blue-50 text-blue-600'
+                    : 'bg-gray-100 text-gray-600'
+                  }`}
+              >
+                <svg
+                  className="w-4 h-4 mr-1"
+                  fill="currentColor"
+                  viewBox="0 0 24 24"
+                >
+                  <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1 17.93c-3.95-.49-7-3.85-7-7.93 0-.62.08-1.21.21-1.79L9 15v1c0 1.1.9 2 2 2v1.93zm6.9-2.54c-.26-.81-1-1.39-1.9-1.39h-1v-3c0-.55-.45-1-1-1H8v-2h2c.55 0 1-.45 1-1V7h2c1.1 0 2-.9 2-2v-.41c2.93 1.19 5 4.06 5 7.41 0 2.08-.8 3.97-2.1 5.39z" />
+                </svg>
+                {useNetwork ? t('联网功能：开启') : t('联网功能：关闭')}
+              </button>
+              <button
+                type="submit"
+                disabled={isLoading || !userInput.trim()}
+                className={`flex items-center justify-center w-8 h-8 rounded-lg transition-all duration-200 ${isLoading || !userInput.trim()
+                    ? 'bg-gray-100 text-gray-400 cursor-not-allowed'
+                    : 'bg-blue-500 text-white hover:bg-blue-600 hover:shadow-md active:transform active:scale-95'
+                  }`}
+              >
+                <svg
+                  className="w-4 h-4"
+                  fill="none"
+                  stroke="currentColor"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    strokeWidth={2}
+                    d="M5 12h14m-4 4l4-4-4-4"
+                  />
+                </svg>
+              </button>
+            </div>
+          </div>
+        </form>
+      </div>
+    </div>
+  )
+);
 };
