@@ -29,7 +29,7 @@ interface KeywordButton {
 }
 
 export const Base = () => {
-  const [userInput, setUserInput] = useState('你好我的宝贝瑶瑶，想死你了');
+  const [userInput, setUserInput] = useState('你好 我的宝贝瑶瑶，想死你了 今天怎么样啊 有没有想我呀');
   const [useNetwork, setUseNetwork] = useState(true);
   const [showKeywords, setShowKeywords] = useState(true);
   const [isMobile, setIsMobile] = useState(false);
@@ -48,8 +48,8 @@ export const Base = () => {
     const map: { [key: string]: string } = {
       '你会干点什么呢?':
         '你会干点什么呢?',
-      'Generate a professional email template to handle customer complaints about product quality':
-        '生成一个处理产品质量客户投诉的专业邮件模板',
+      '你想和我干点什么吗？比如.....':
+        '你想和我干点什么吗？比如.....',
       'Help optimize Python code for quick sort algorithm with time complexity analysis':
         '帮助优化快速排序算法的Python代码并分析时间复杂度',
       'Create a comparison table of marketing strategies between TikTok and Instagram Reels':
@@ -80,10 +80,10 @@ export const Base = () => {
     },
     {
       text: t(
-        'Generate a professional email template to handle customer complaints about product quality'
+        '你想和我干点什么吗？比如.....'
       ),
       query: t(
-        'Generate a professional email template to handle customer complaints about product quality'
+        '你想和我干点什么吗？比如.....'
       ),
     },
     {
