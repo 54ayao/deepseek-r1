@@ -57,14 +57,14 @@ export const Base = () => {
       'DeepSeek R1 你的病娇女朋友 瑶瑶' 'DeepSeek R1 你的病娇女朋友 瑶瑶',
       '使用腾讯云EdgeOne pages边缘计算能力在靠近终端用户的地方执行 DeepSeek R1 计算，提升用户体验和运营效率，确保超低延迟和稳定的高性能。':
         '使用腾讯云EdgeOne pages边缘计算能力在靠近终端用户的地方执行 DeepSeek R1 计算，提升用户体验和运营效率，确保超低延迟和稳定的高性能。',
-      '备案号 ': '备案号',
+      '免费使用 ': '免费使用 ',
       '思考中......': '思考过程',
       '搜索中': '搜索中',
            '由 DeepSeek R1 生成': '由 DeepSeek R1 生成',
       '输入消息...': '输入消息...',
       '联网功能：开启': '联网: 开启',
       '联网功能：关闭': '联网: 关闭',
-      参考来源: '参考来源',
+      References: '参考',
     };
     return isSiteEnv ? map[en] || en : en;
   };
@@ -119,15 +119,27 @@ export const Base = () => {
   const onEdgeOneAIBtnClick = () => {
     if (isSiteEnv) {
       window.open(
-        'https://beian.miit.gov.cn/#/Integrated/recordQuery',
+        'https://edgeone.cloud.tencent.com/pages/document/169925463311781888',
         '_blank'
       );
       return;
     }
-    window.open('https://beian.miit.gov.cn/#/Integrated/recordQuery', '_blank');
+    window.open('http://edgeone.ai/document/169927753925951488', '_blank');
   };
 
-
+  const onGithubBtnClick = () => {
+    if (isSiteEnv) {
+      window.open(
+        'https://github.com/TencentEdgeOne/pages-templates/blob/main/examples/deepseek-r1-edge/README_zh-CN.md',
+        '_blank'
+      );
+      return;
+    }
+    window.open(
+      'https://github.com/TencentEdgeOne/pages-templates/tree/main/examples/deepseek-r1-edge',
+      '_blank'
+    );
+  };
 
   const onDeployBtnClick = () => {
     if (isSiteEnv) {
@@ -138,7 +150,7 @@ export const Base = () => {
       return;
     }
     window.open(
-      'https://console.cloud.tencent.com/edgeone/pages/new?from=github&template=deepseek-r1-edge',
+      'https://edgeone.ai/pages/templates/deepseek-r1-edge',
       '_blank'
     );
   };
@@ -390,12 +402,12 @@ export const Base = () => {
           </p>
 
           <p className="mt-2 text-sm text-gray-500">
-            {t('备案号 ')}{' '}
+            {t('免费使用 ')}{' '}
             <button
               onClick={onEdgeOneAIBtnClick}
               className="mt-4 text-blue-600 hover:text-blue-800 hover:underline focus:outline-none"
             >
-              辽ICP备2023005487号-8
+              EdgeOne Pages
             </button>
           </p>
         </div>
@@ -508,7 +520,7 @@ export const Base = () => {
               clipRule="evenodd"
             />
           </svg>
-          {t('参考来源')} ({sources.length})
+          {t('References')} ({sources.length})
         </button>
         {isOpen && (
           <div className="p-3 space-y-2 text-sm bg-white rounded-b-lg">
@@ -544,7 +556,15 @@ export const Base = () => {
               className="h-7"
             />
           </a>
-         
+          <a
+            onClick={onGithubBtnClick}
+            target="_blank"
+            className="text-gray-600 transition-colors cursor-pointer hover:text-gray-900"
+          >
+            <svg height="24" width="24" viewBox="0 0 16 16" fill="currentColor">
+              <path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0016 8c0-4.42-3.58-8-8-8z" />
+            </svg>
+          </a>
         </header>
 
         <WelcomeMessage show={showKeywords} />
