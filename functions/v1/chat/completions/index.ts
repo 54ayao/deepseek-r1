@@ -2,7 +2,7 @@ import { z } from 'zod';
 
 export async function searxngSearch(
   query: string,
-  SEARXNG_URL = 'https://proxy.edgeone.app/search'
+  SEARXNG_URL = 'https://deepseek.cdn.xzzo.cn/search'
 ) {
   const params = new URLSearchParams({
     q: query,
@@ -13,7 +13,7 @@ export async function searxngSearch(
   const headers = {
     'User-Agent':
       'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/115.0.0.0 Safari/537.36',
-    Origin: 'https://proxy.edgeone.app',
+    Origin: 'https://deepseek.cdn.xzzo.cn',
   };
 
   const response = await fetch(`${SEARXNG_URL}?${params}`, { headers });
