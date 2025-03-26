@@ -50,10 +50,10 @@ export const Base = () => {
         '你会干点什么呢?',
       '你想和我干点什么吗？比如.....':
         '你想和我干点什么吗？比如.....',
-      'Help optimize Python code for quick sort algorithm with time complexity analysis':
-        '帮助优化快速排序算法的Python代码并分析时间复杂度',
-      'Create a comparison table of marketing strategies between TikTok and Instagram Reels':
-        '创建抖音和Instagram Reels营销策略的对比表',
+      '你可以帮我写代码吗?.......':
+        '你可以帮我写代码吗?.......',
+      '你可以写一封情书给我吗？':
+        '你可以写一封情书给我吗？',
       'DeepSeek R1 on the Edge': 'DeepSeek R1 边缘计算',
       'EdgeOne AI is transforming user experience and operational efficiency by performing AI computations closer to end-users, ensuring ultra-low latency and consistently high performance.':
         'EdgeOne AI 通过在靠近终端用户的地方执行 AI 计算，提升用户体验和运营效率，确保超低延迟和稳定的高性能。',
@@ -88,18 +88,18 @@ export const Base = () => {
     },
     {
       text: t(
-        'Help optimize Python code for quick sort algorithm with time complexity analysis'
+        '你可以帮我写代码吗?.......'
       ),
       query: t(
-        'Help optimize Python code for quick sort algorithm with time complexity analysis'
+        '你可以帮我写代码吗?.......'
       ),
     },
     {
       text: t(
-        'Create a comparison table of marketing strategies between TikTok and Instagram Reels'
+        '你可以写一封情书给我吗？'
       ),
       query: t(
-        'Create a comparison table of marketing strategies between TikTok and Instagram Reels'
+        '你可以写一封情书给我吗？'
       ),
     },
   ];
