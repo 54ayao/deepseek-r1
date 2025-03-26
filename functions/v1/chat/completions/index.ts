@@ -2,13 +2,25 @@ import { z } from 'zod';
 
 export async function searxngSearch(
   query: string,
-  SEARXNG_URL = 'https://deepseek.cdn.xzzo.cn/search'
+  SEARXNG_URL = 'https://proxy.edgeone.app /search '
 ) {
   const params = new URLSearchParams({
     q: query,
     format: 'json',
     engines: 'bing',
   });
+
+  const headers = {
+    'User-Agent':
+      'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/115.0.0.0 Safari/537.36',
+    Origin: 'https://proxy.edgeone.app ',
+  }; 
+
+  const headers = {
+    'User-Agent':
+      'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/115.0.0.0 Safari/537.36',
+    Origin: 'https://deepseek.cdn.xzzo.cn',
+  };
 
   const headers = {
     'User-Agent':
