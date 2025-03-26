@@ -46,8 +46,8 @@ export const Base = () => {
 
   const t = (en: string) => {
     const map: { [key: string]: string } = {
-      '你会干点什么':
-        '你会干点什么',
+      '你会干点什么呢?':
+        '你会干点什么呢?',
       'Generate a professional email template to handle customer complaints about product quality':
         '生成一个处理产品质量客户投诉的专业邮件模板',
       'Help optimize Python code for quick sort algorithm with time complexity analysis':
@@ -72,10 +72,10 @@ export const Base = () => {
   const KEYWORD_BUTTONS: KeywordButton[] = [
     {
       text: t(
-        '你会干点什么'
+        '你会干点什么呢?'
       ),
       query: t(
-        '你会干点什么'
+        '你会干点什么呢？'
       ),
     },
     {
