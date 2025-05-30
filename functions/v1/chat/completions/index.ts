@@ -1,4 +1,4 @@
-import { z } from 'zod';
+@import { z } from 'zod';
 
 export async function searxngSearch(
   query: string,
@@ -198,7 +198,7 @@ export async function onRequest({ request, params, env }: any) {
   try {
     // @ts-ignore-next-line
     const res = await AI.chatCompletions({
-      model: '@tx/deepseek-ai/deepseek-r1-671b',
+      model: '@tx/deepseek-ai/deepseek-r1',
       messages: messages,
       stream: true,
     });
