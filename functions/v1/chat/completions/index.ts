@@ -198,7 +198,7 @@ export async function onRequest({ request, params, env }: any) {
   try {
     // @ts-ignore-next-line
     const res = await AI.chatCompletions({
-      model: '@tx/deepseek-ai/deepseek-r1-distill-qwen-32b',
+      model: '@tx/deepseek-ai/deepseek-r1-0528',
       messages: messages,
       stream: true,
     });
